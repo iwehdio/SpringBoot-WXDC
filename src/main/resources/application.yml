@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    platform: mysql
+    url: jdbc:mysql://mysql ip地址:3306/WXDC?characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+  jpa:
+    show-sql: true
+  freemarker:
+    suffix: .ftl
+    template-loader-path: classpath:/templates/
+    settings:
+      classic_compatible: true
+  redis:
+    host: redis ip地址
+    port: 6379
+    password: 123456
+#  mvc:
+#    static-path-pattern: /static/**
+#  resources:
+#    static-locations: classpath:/static/
+#  jackson:
+#    default-property-inclusion: non_null
+server:
+  context-path: /sell # url前缀
+wechat:
+  mpAppId: 微信应用id
+  mpAppSecret:
+  templateIds:
+    confirmMessage: 微信模板消息id
+alipay:
+  app-id: 应用id
+  alipay-public-key: 支付宝公钥
+  app-private-key: 应用私钥
+  base-url:  http://后端部署ip/sell
